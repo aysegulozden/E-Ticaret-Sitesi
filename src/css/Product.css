@@ -1,0 +1,54 @@
+.image {
+    width: 180px;
+    height: 240px;
+}
+
+.card {
+
+    width: 200px;
+    height: 420px;
+    box-shadow: 1px 4px 3px lightgray;
+    border-radius: 10px;
+    margin: 15px;
+    cursor: pointer;
+
+}
+
+
+.card:hover {
+    box-shadow: 1px 4px 3px rgb(46, 32, 32);
+    transition: .5 all ease-in-out;
+
+}
+
+.flex-row {
+    flex-wrap: wrap;
+    margin-top: 25px;
+
+}
+
+.title {
+    text-align: center;
+    height: 50PX;
+}
+
+.price {
+    text-align: center;
+    font-size: 25px;
+}
+
+.button-detay {
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: rgb(148, 166, 201);
+    cursor: pointer;
+    color: white;
+
+}
+
+.button-detay:hover {
+    background-color: rgb(57, 80, 122);
+    transition: .5 all ease-in-out;
+
+}

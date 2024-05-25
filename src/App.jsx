@@ -3,6 +3,8 @@ import './App.css'
 import PageContainer from './container/PageContainer'
 import Header from './components/Header'
 import Product from './components/Product'
+import RouterConfig from './config/RouterConfig'
+import Loading from './components/Loading'
 
 
 function App() {
@@ -12,9 +14,9 @@ function App() {
     <div>
 
       <PageContainer>
+        <Loading />
         <Header />
-        <Product />
-
+        <RouterConfig />
       </PageContainer>
 
     </div>
