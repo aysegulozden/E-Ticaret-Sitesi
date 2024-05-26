@@ -3,9 +3,13 @@ import '../css/Header.css';
 import { CiShoppingBasket } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { IoMoonOutline } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
     const [theme, setThem] = useState(false);
+
+    const navigate = useNavigate();
+
     const changeThem = () => {
         const root = document.getElementById("root");
         setThem(!theme);
@@ -20,11 +24,12 @@ function Header() {
         }
 
 
+
     }
     return (
         <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
 
-            <div className='flex-row'>
+            <div className='flex-row' onClick={() => navigate("/")}>
                 <img className='logo ' src="./src/images/images.png" />
                 <p className='logo-text'>Beauty</p>
 
