@@ -5,6 +5,7 @@ import { setSelectedProduct } from '../redux/slices/productSlice';
 import '../css/ProductDetails.css';
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
+import { addProductToBasket } from '../redux/slices/basketSlice';
 
 
 
@@ -37,6 +38,16 @@ function ProductDetails() {
     const azalt = () => {
         setCount(count - 1);
     }
+    const addBasket = () => {
+        const payload = {
+            id,
+            price,
+            image,
+            description,
+            count
+        }
+        dispatch(addProductToBasket(payload));
+    }
 
 
     return (
@@ -53,7 +64,7 @@ function ProductDetails() {
 
                 </div>
                 <div >
-                    <button className='button'>Sepete Ekle</button>
+                    <button className='button' onClick={addBasket}>Sepete Ekle</button>
                 </div>
             </div>
 
